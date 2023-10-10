@@ -1,0 +1,101 @@
+{
+    "realEstateTypeName": "전세",
+    "roomTypeList": [
+        {
+            "roomType": "단독/다가구",
+            "complexNo": 2340138457,
+            "complexName": "다가구",
+            "sidoName": "서울시",
+            "guName": "종로구",
+            "dongName": "평창동",
+            "latitude": 37.605256,
+            "longitude": 126.964347,
+            "descriptionTagList": [
+                "10년이내",
+                "융자금없는",
+                "화장실두개",
+                "소형평수"
+            ],
+            "floor": "중",
+            "pyeong": "16",
+            "supplyArea": 54,
+            "exclusiveArea": 54,
+            "maintenanceFee": 30000,
+            "color": "red",
+            "checked": true,
+            "imageSrc": "/20230918_28/land_naver_1695015840415h65NT_JPEG/170223202306121354124.jpg"
+        },
+        {
+            "roomType": "단독/다가구",
+            "complexNo": 2338339615,
+            "complexName": "다가구",
+            "sidoName": "서울시",
+            "guName": "종로구",
+            "dongName": "평창동",
+            "latitude": 37.605424,
+            "longitude": 126.963853,
+            "descriptionTagList": [
+                "10년이내",
+                "융자금없는",
+                "화장실한개",
+                "대형평수"
+            ],
+            "floor": 3,
+            "pyeong": "24",
+            "supplyArea": 80,
+            "exclusiveArea": 70,
+            "maintenanceFee": 30000,
+            "color": "red",
+            "checked": true,
+            "imageSrc": ""
+        },
+        {
+            "roomType": "단독/다가구",
+            "complexNo": 2337601558,
+            "complexName": "단독",
+            "sidoName": "서울시",
+            "guName": "종로구",
+            "dongName": "평창동",
+            "latitude": 37.607148,
+            "longitude": 126.972526,
+            "descriptionTagList": [
+                "10년이내",
+                "융자금없는",
+                "방세개",
+                "화장실두개"
+            ],
+            "floor": "고",
+            "pyeong": "22",
+            "supplyArea": 73,
+            "exclusiveArea": 58,
+            "maintenanceFee": 30000,
+            "color": "red",
+            "checked": true,
+            "imageSrc": "/20230902_205/land_naver_16936179905186fB2a_JPEG/13779207_2023929531711.jpg"
+        },
+        {
+            "roomType": "단독/다가구",
+            "complexNo": 2337350356,
+            "complexName": "다가구",
+            "sidoName": "서울시",
+            "guName": "종로구",
+            "dongName": "평창동",
+            "latitude": 37.605256,
+            "longitude": 126.964347,
+            "descriptionTagList": [
+                "10년이내",
+                "융자금없는",
+                "1층",
+                "소형평수"
+            ],
+            "floor": 1,
+            "pyeong": "16",
+            "supplyArea": 54,
+            "exclusiveArea": 54,
+            "maintenanceFee": 30000,
+            "color": "red",
+            "checked": true,
+            "imageSrc": ""
+        }
+    ]
+}
