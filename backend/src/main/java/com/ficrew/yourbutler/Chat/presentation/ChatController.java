@@ -1,11 +1,11 @@
-package com.ficrew.yourbutler.Chat.presentation;
+package com.ficrew.yourbutler.chat.presentation;
 
-import com.ficrew.yourbutler.Chat.application.facade.ChatFacade;
-import com.ficrew.yourbutler.Chat.application.result.ChatResult;
-import com.ficrew.yourbutler.Chat.presentation.request.CreateMessageRequest;
-import com.ficrew.yourbutler.Chat.presentation.response.ChatResponse;
-import com.ficrew.yourbutler.Chat.presentation.response.MessageResponse;
-import com.ficrew.yourbutler.Chat.presentation.response.MessageResponseList;
+import com.ficrew.yourbutler.chat.application.facade.ChatFacade;
+import com.ficrew.yourbutler.chat.application.result.ChatResult;
+import com.ficrew.yourbutler.chat.presentation.request.CreateMessageRequest;
+import com.ficrew.yourbutler.chat.presentation.response.ChatResponse;
+import com.ficrew.yourbutler.chat.presentation.response.MessageResponse;
+import com.ficrew.yourbutler.chat.presentation.response.MessageResponseList;
 import com.ficrew.yourbutler.global.auth.AuthenticatedMember;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

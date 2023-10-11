@@ -1,6 +1,6 @@
-package com.ficrew.yourbutler.Chat.infrastructure.persistence.jpa;
+package com.ficrew.yourbutler.chat.infrastructure.persistence.jpa;
 
-import com.ficrew.yourbutler.Chat.domain.entity.Bank;
+import com.ficrew.yourbutler.chat.domain.entity.Bank;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -55,6 +55,7 @@ const items = [
 ];
 
 const Home = async () => {
+  console.log("hello?");
   let session = null;
   session = await getServerSession(authOptions);
   let user = null;

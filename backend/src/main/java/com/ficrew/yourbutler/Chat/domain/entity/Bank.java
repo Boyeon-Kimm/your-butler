@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.domain.entity;
+package com.ficrew.yourbutler.chat.domain.entity;
 
 import lombok.Getter;
 

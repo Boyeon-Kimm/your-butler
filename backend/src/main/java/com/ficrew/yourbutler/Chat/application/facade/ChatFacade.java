@@ -1,12 +1,12 @@
-package com.ficrew.yourbutler.Chat.application.facade;
+package com.ficrew.yourbutler.chat.application.facade;
 
-import com.ficrew.yourbutler.Chat.application.CreateMessageProcessor;
-import com.ficrew.yourbutler.Chat.application.GetAllChatListProcessor;
-import com.ficrew.yourbutler.Chat.application.GetMessageListProcessor;
-import com.ficrew.yourbutler.Chat.application.command.CreateMessageCommand;
-import com.ficrew.yourbutler.Chat.application.result.ChatResult;
-import com.ficrew.yourbutler.Chat.application.result.MessageResult;
-import com.ficrew.yourbutler.Chat.application.result.MessageResultList;
+import com.ficrew.yourbutler.chat.application.CreateMessageProcessor;
+import com.ficrew.yourbutler.chat.application.GetAllChatListProcessor;
+import com.ficrew.yourbutler.chat.application.GetMessageListProcessor;
+import com.ficrew.yourbutler.chat.application.command.CreateMessageCommand;
+import com.ficrew.yourbutler.chat.application.result.ChatResult;
+import com.ficrew.yourbutler.chat.application.result.MessageResult;
+import com.ficrew.yourbutler.chat.application.result.MessageResultList;
 import com.ficrew.yourbutler.global.auth.AuthenticatedMember;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

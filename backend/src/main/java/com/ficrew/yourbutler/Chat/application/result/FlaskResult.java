@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.application.result;
+package com.ficrew.yourbutler.chat.application.result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

@@ -1,0 +1,82 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Branch : develop-flask'
+                echo 'Clone Repository'
+                git branch: 'develop-flask', url: 'https://lab.ssafy.com/s09-fintech-finance-sub2/S09P22A405', credentialsId: 'gitlab-credential-id'
+            }
+        }
+        
+        stage('Set environment') {
+            steps {
+                echo 'Copy require file to pipeline folder (environment)'
+                sh 'cp /var/jenkins_home/util/.env ./flask_server/.env'
+            }
+        }
+    
+        stage('Check MySQL is running') {
+            steps {
+                echo 'Check if MySQL container is running'
+                script {
+                    def isRunning = sh(script: 'docker ps -q -f name=mysql-db', returnStatus: true)
+                    if (isRunning != 0) {
+                        error("MySQL container is not running. Ensure it is running first!")
+                    }
+                }
+            }
+        }    
+    
+        stage('Wait for MySQL to be ready') {
+            steps {
+                echo 'Waiting for MySQL to be fully ready...'
+                sh '''
+                for i in {1..30}; do
+                    if docker exec mysql-db mysql -uroot -p"ssafy.yourbutler.pw" -e "SELECT 1"; then
+                        break
+                    else
+                        echo "Waiting for MySQL to be ready..."
+                        sleep 5
+                    fi
+                done
+                '''
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                echo 'flask docker image build'
+                sh 'cd ./flask_server && docker build -t flask-image .'
+            }
+        }
+        
+        stage('Docker Stop and Remove') {
+            steps {
+                echo 'Stop and remove existing flask container'
+                sh 'docker stop flask-container || true'
+                sh 'docker rm -f flask-container || true'
+            }
+        }
+    
+    
+        stage('Docker run') {
+            steps {
+                echo 'Run flask docker container'
+                sh '''
+                    docker run -d \
+                    -e FLASK_APP=app.py \
+                    -e FLASK_RUN_HOST=0.0.0.0 \
+                    -e FLASK_RUN_PORT=8000 \
+                    -e MYSQL_HOST=mysql-db \
+                    -e MYSQL_PORT=3306 \
+                    -e MYSQL_USER=root \
+                    -e MYSQL_PASSWORD="ssafy.yourbutler.pw" \
+                    --env-file .env \
+                    --name flask-container -p 8000:8000 flask-image
+                '''
+                // sh 'docker run -d --name flask-container -p 8000:8000 flask-image'
+            }
+        }
+    }
+}

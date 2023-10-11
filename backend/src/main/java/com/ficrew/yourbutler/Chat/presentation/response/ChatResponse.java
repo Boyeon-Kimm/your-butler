@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.presentation.response;
+package com.ficrew.yourbutler.chat.presentation.response;
 
 import lombok.Getter;
 

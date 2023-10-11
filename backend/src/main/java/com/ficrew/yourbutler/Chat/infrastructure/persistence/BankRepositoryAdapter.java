@@ -1,8 +1,8 @@
-package com.ficrew.yourbutler.Chat.infrastructure.persistence;
+package com.ficrew.yourbutler.chat.infrastructure.persistence;
 
-import com.ficrew.yourbutler.Chat.domain.entity.Bank;
-import com.ficrew.yourbutler.Chat.domain.repository.BankRepository;
-import com.ficrew.yourbutler.Chat.infrastructure.persistence.jpa.JpaBankRepository;
+import com.ficrew.yourbutler.chat.domain.entity.Bank;
+import com.ficrew.yourbutler.chat.domain.repository.BankRepository;
+import com.ficrew.yourbutler.chat.infrastructure.persistence.jpa.JpaBankRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

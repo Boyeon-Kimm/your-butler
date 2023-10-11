@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.application;
+package com.ficrew.yourbutler.chat.application;
 
 public class MonthPayCalculate {
 

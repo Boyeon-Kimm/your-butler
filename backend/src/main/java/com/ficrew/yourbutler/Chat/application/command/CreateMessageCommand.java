@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.application.command;
+package com.ficrew.yourbutler.chat.application.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package com.ficrew.yourbutler.Chat.domain.repository;
+package com.ficrew.yourbutler.chat.domain.repository;
 
-import com.ficrew.yourbutler.Chat.domain.entity.Bank;
+import com.ficrew.yourbutler.chat.domain.entity.Bank;
 
 import java.util.Optional;
 

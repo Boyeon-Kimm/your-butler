@@ -1,4 +1,4 @@
-package com.ficrew.yourbutler.Chat.infrastructure.config;
+package com.ficrew.yourbutler.chat.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,0 +1,72 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Branch : develop-back'
+                echo 'Clone Repository'
+                git branch: 'develop-back', url: 'https://lab.ssafy.com/s09-fintech-finance-sub2/S09P22A405', credentialsId: 'gitlab-credential-id'
+            }
+        }
+        
+        stage('Set environment') {
+            steps {
+                echo 'Copy require file to pipeline folder (environment)'
+                sh 'cp /var/jenkins_home/util/env.properties ./backend/src/main/resources/env.properties'
+            }
+        }
+        
+        stage('Check MySQL is running') {
+            steps {
+                echo 'Check if MySQL container is running'
+                script {
+                    def isRunning = sh(script: 'docker ps -q -f name=mysql-db', returnStatus: true)
+                    if (isRunning != 0) {
+                        error("MySQL container is not running. Ensure it is running first!")
+                    }
+                }
+            }
+        }    
+    
+        stage('Wait for MySQL to be ready') {
+            steps {
+                echo 'Waiting for MySQL to be fully ready...'
+                sh '''
+                for i in {1..30}; do
+                    if docker exec mysql-db mysql -uroot -p"ssafy.yourbutler.pw" -e "SELECT 1"; then
+                        break
+                    else
+                        echo "Waiting for MySQL to be ready..."
+                        sleep 5
+                    fi
+                done
+                '''
+            }
+        }
+    
+        stage('Docker Build') {
+            steps {
+                echo 'backend docker image build'
+                sh 'cd ./backend && docker build -t backend-image .'
+            }
+        }
+        
+        stage('Docker Stop and Remove') {
+            steps {
+                echo 'Stop and remove existing backend container'
+                sh 'docker stop backend-container || true'
+                sh 'docker rm -f backend-container || true'
+            }
+        }
+    
+    
+        stage('Docker run') {
+            steps {
+                echo 'Run backend docker container'
+                sh 'docker run -d --name backend-container -p 5000:5000 backend-image'
+            }
+        }
+        
+    }
+}

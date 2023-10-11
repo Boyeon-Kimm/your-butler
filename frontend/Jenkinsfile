@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Branch : develop-front'
+                echo 'Clone Repository'
+                git branch: 'develop-front', url: 'https://lab.ssafy.com/s09-fintech-finance-sub2/S09P22A405', credentialsId: 'gitlab-credential-id'
+            }
+        }
+        
+        stage('Set environment') {
+            steps {
+                echo 'Copy require file to pipeline folder (environment)'
+                sh 'cp /var/jenkins_home/util/.env.local ./frontend/.env.local'
+            }
+        }
+    
+        stage('Docker Build') {
+            steps {
+                echo 'frontend docker image build'
+                sh 'cd ./frontend && docker build -t frontend-image .'
+            }
+        }
+        
+        stage('Docker Stop and Remove') {
+            steps {
+                echo 'Stop and remove existing frontend container'
+                sh 'docker stop frontend-container || true'
+                sh 'docker rm -f frontend-container || true'
+            }
+        }
+    
+    
+        stage('Docker run') {
+            steps {
+                echo 'Run frontend docker container'
+                sh '''
+                docker run -d \
+                --env-file .env.local \
+                --name frontend-container \
+                -p 3000:3000 frontend-image
+                '''
+            }
+        }
+        
+    }
+}

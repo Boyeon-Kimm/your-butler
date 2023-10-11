@@ -1,7 +1,7 @@
-package com.ficrew.yourbutler.Chat.infrastructure.persistence.jpa;
+package com.ficrew.yourbutler.chat.infrastructure.persistence.jpa;
 
-import com.ficrew.yourbutler.Chat.domain.entity.ChatRoom;
-import com.ficrew.yourbutler.Chat.domain.entity.Message;
+import com.ficrew.yourbutler.chat.domain.entity.ChatRoom;
+import com.ficrew.yourbutler.chat.domain.entity.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,11 +1,11 @@
-package com.ficrew.yourbutler.Chat.infrastructure.config;
+package com.ficrew.yourbutler.chat.infrastructure.config;
 
-import com.ficrew.yourbutler.Chat.application.CreateMessageProcessor;
-import com.ficrew.yourbutler.Chat.application.GetAllChatListProcessor;
-import com.ficrew.yourbutler.Chat.application.GetMessageListProcessor;
-import com.ficrew.yourbutler.Chat.domain.repository.BankRepository;
-import com.ficrew.yourbutler.Chat.domain.repository.ChatRepository;
-import com.ficrew.yourbutler.Chat.domain.repository.MessageRepository;
+import com.ficrew.yourbutler.chat.application.CreateMessageProcessor;
+import com.ficrew.yourbutler.chat.application.GetAllChatListProcessor;
+import com.ficrew.yourbutler.chat.application.GetMessageListProcessor;
+import com.ficrew.yourbutler.chat.domain.repository.BankRepository;
+import com.ficrew.yourbutler.chat.domain.repository.ChatRepository;
+import com.ficrew.yourbutler.chat.domain.repository.MessageRepository;
 import com.ficrew.yourbutler.member.domain.repository.MemberRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

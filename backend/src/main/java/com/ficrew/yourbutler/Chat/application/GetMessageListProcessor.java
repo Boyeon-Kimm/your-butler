@@ -1,11 +1,11 @@
-package com.ficrew.yourbutler.Chat.application;
+package com.ficrew.yourbutler.chat.application;
 
-import com.ficrew.yourbutler.Chat.application.result.MessageResult;
-import com.ficrew.yourbutler.Chat.application.result.MessageResultList;
-import com.ficrew.yourbutler.Chat.domain.entity.ChatRoom;
-import com.ficrew.yourbutler.Chat.domain.entity.Message;
-import com.ficrew.yourbutler.Chat.domain.repository.ChatRepository;
-import com.ficrew.yourbutler.Chat.domain.repository.MessageRepository;
+import com.ficrew.yourbutler.chat.application.result.MessageResult;
+import com.ficrew.yourbutler.chat.application.result.MessageResultList;
+import com.ficrew.yourbutler.chat.domain.entity.ChatRoom;
+import com.ficrew.yourbutler.chat.domain.entity.Message;
+import com.ficrew.yourbutler.chat.domain.repository.ChatRepository;
+import com.ficrew.yourbutler.chat.domain.repository.MessageRepository;
 import com.ficrew.yourbutler.global.auth.AuthenticatedMember;
 import com.ficrew.yourbutler.member.domain.entity.Member;
 import com.ficrew.yourbutler.member.domain.repository.MemberRepository;

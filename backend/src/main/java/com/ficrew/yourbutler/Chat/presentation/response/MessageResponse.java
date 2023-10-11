@@ -1,6 +1,6 @@
-package com.ficrew.yourbutler.Chat.presentation.response;
+package com.ficrew.yourbutler.chat.presentation.response;
 
-import com.ficrew.yourbutler.Chat.application.result.MessageResult;
+import com.ficrew.yourbutler.chat.application.result.MessageResult;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;

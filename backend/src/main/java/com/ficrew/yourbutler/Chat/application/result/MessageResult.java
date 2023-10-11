@@ -1,7 +1,7 @@
-package com.ficrew.yourbutler.Chat.application.result;
+package com.ficrew.yourbutler.chat.application.result;
 
-import com.ficrew.yourbutler.Chat.domain.entity.Message;
-import com.ficrew.yourbutler.Chat.presentation.response.MessageResponse;
+import com.ficrew.yourbutler.chat.domain.entity.Message;
+import com.ficrew.yourbutler.chat.presentation.response.MessageResponse;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
